@@ -1,17 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  addNewPost: false,
-
+  updatePostForm: false,
   actions: {
-    postShow() {
-      this.set('addNewPost', true);
+    updatePostForm() {
+      this.set('updatePostForm', true);
     },
-    postHide() {
-      this.set('addNewPost', false);
-    },
-
-    save() {
+    update(post) {
       var params = {
         headline: this.get('headline'),
         author: this.get('author'),
@@ -19,9 +14,8 @@ export default Ember.Component.extend({
         content: this.get('content'),
         image: this.get('image')
       };
-
-      this.set('addNewPost', false),
-      this.sendAction('save', params);
+      this.set('updatePostForm', false);
+      this.sendAction('update', post, params);
     }
   }
 });
