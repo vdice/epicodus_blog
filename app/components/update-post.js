@@ -4,6 +4,9 @@ export default Ember.Component.extend({
   tagName: 'span',
   updatePostForm: false,
   actions: {
+    updateHide() {
+      this.set('updatePostForm', false);
+    },
     updatePostForm() {
       this.set('updatePostForm', true);
     },

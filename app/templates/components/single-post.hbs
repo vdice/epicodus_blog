@@ -3,4 +3,14 @@
   <h4>by {{post.author}}</h4>
   <i><p>{{moment-format post.date}}</p></i>
   {{post.content}}
+  {{add-comment post=post addComment="addComment"}}
+
+  <h2>Comments</h2>
+  <ul>
+    {{#each post.comments as |comment|}}
+      <li>
+        <strong>{{comment.user}}</strong>: {{comment.comment}}
+      </li>
+    {{/each}}
+  </ul>
 </div>

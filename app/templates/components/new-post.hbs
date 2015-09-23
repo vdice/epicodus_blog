@@ -1,5 +1,5 @@
 {{#if addNewPost}}
-  <h1 {{action 'postHide'}}>New Post</h1>
+  <h1>New Post</h1>
     <div>
       <form class="form-horizontal">
         <div class="form-group">
@@ -27,7 +27,8 @@
           {{input value=image id="image" class="form-control"}}
         </div>
 
-        <button {{action 'save'}}>Save</button>
+        <button class="btn btn-success"{{action 'save'}}>Save</button>
+        <button class="btn"{{action 'postHide'}}>Cancel</button>
       </form>
     </div>
 {{else}}
