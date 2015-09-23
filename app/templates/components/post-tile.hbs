@@ -3,5 +3,6 @@
   <br> by {{post.author}}
   <br> {{post.date}}
   <br> {{post.content}}
-  {{update-post post=post update="update"}}
+  {{update-post post=post update="update" destroyPost='destroyPost'}}
+  <button class="btn btn-danger" {{action 'destroyPost' post}}>Delete</button>
 </li>
