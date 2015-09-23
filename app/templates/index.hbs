@@ -1,2 +1,10 @@
-{{new-post save='save'}}
-{{post-listing posts=model update="update" destroyPost="destroyPost"}}
+<div class="container">
+  <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        {{post-listing posts=model update="update" destroyPost="destroyPost"}}
+        <div>
+          {{new-post save='save'}}
+        </div>
+      </div>
+  </div>
+</div>

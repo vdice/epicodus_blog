@@ -1,8 +1,17 @@
 <li>
-  <strong>{{post.headline}}</strong>
-  <br> by {{post.author}}
-  <br> {{post.date}}
-  <br> {{post.content}}
-  {{update-post post=post update="update" destroyPost='destroyPost'}}
-  <button class="btn btn-danger" {{action 'destroyPost' post}}>Delete</button>
+  <div class="post-preview">
+    <h2 class="post-title">
+      {{post.headline}}
+    </h2>
+    <h3 class="post-subtitle">
+      {{post.content}}
+    </h3>
+
+    <i><p class="post-meta">Posted by {{post.author}} on {{moment-format post.date}}</p></i>
+
+    <div>
+      {{update-post post=post update="update" destroyPost='destroyPost'}}
+      <button class="btn btn-danger" {{action 'destroyPost' post}}>Delete</button>
+    </div>
+  </div>
 </li>

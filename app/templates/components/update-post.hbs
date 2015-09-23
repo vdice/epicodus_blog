@@ -1,30 +1,30 @@
 {{#if updatePostForm}}
   <h1>Update Post</h1>
-  <div>
-    <form>
+  <div class="container">
+    <form class="form-horizontal">
       <div class="form-group">
         <label for="headline">Headline</label>
-        {{input value=headline id="headline" placeholder=post.headline}}
+        {{input value=headline id="headline" placeholder=post.headline  class="form-control"}}
       </div>
 
       <div class="form-group">
         <label for="author">Author</label>
-        {{input value=author id="author" placeholder=post.author}}
+        {{input value=author id="author" placeholder=post.author class="form-control"}}
       </div>
 
       <div class="form-group">
         <label for="date">Date</label>
-        {{input value=date id="date" placeholder=post.date}}
+        {{input value=date id="date" placeholder=post.date class="form-control"}}
       </div>
 
       <div class="form-group">
         <label for="content">Content</label>
-        {{textarea row="4" cols="50" value=content id="content" placeholder=post.content}}
+        {{textarea row="4" cols="50" value=content id="content" placeholder=post.content class="form-control"}}
       </div>
 
       <div class="form-group">
         <label for="image">Image URL</label>
-        {{input value=image id="image" placeholder=post.image}}
+        {{input value=image id="image" placeholder=post.image class="form-control"}}
       </div>
 
       <button class="btn btn-primary" {{action 'update' post}}>Save</button>
