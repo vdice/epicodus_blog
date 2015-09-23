@@ -10,7 +10,7 @@ export default Ember.Route.extend({
       newComment.save()
         .catch(e => {console.log(e.errors)});
 
-      // params.post.save();
+      params.post.save();
       this.transitionTo('post', params.post);
     },
   }
