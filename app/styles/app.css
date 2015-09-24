@@ -50,3 +50,9 @@ ul {
 .comment-date {
   font-size: 10px;
 }
+
+.glyphicon:hover {
+  color: red;
+  cursor: pointer;
+  transition-duration: .3s;
+}

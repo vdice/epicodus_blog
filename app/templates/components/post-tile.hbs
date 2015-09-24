@@ -10,11 +10,10 @@
       </h3>
     {{/link-to}}
 
-    <p class="post-meta">Posted by {{post.author}} on {{moment-format post.date}}</p>
-
-    <div>
+    <p class="post-meta">Posted by {{post.author}} on {{moment-format post.date}}
       {{update-post post=post update="update" destroyPost='destroyPost'}}
-      <button class="btn btn-danger" {{action 'destroyPost' post}}>Delete</button>
-    </div>
+      <span class="glyphicon glyphicon-trash" aria-hidden="true" {{action 'destroyPost' post}}></span>
+    </p>
+
   </div>
 </li>
