@@ -56,3 +56,15 @@ ul {
   cursor: pointer;
   transition-duration: .3s;
 }
+
+.main,
+.article {
+  padding-top: 0;
+}
+
+.article li {
+  display: inline;
+  background-color: #B0E0E6;
+  font-size: 12px;
+  padding: 3px;
+}

@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   addNewPost: false,
-  // categories: ["finance", "kush", "venture capitalism", "hackeysack", "ember"],
   selectedCategories: [],
 
   actions: {

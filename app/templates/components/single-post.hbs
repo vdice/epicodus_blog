@@ -1,17 +1,18 @@
-<div class="container">
+<div class="container article">
   <h2>{{post.headline}}</h2>
   <h4>by {{post.author}}</h4>
-  <i><p>{{moment-format post.date}}</p></i>
+  <i><p>
+    {{moment-format post.date}}
+    {{update-post post=post categories=categories update="update" destroyPost='destroyPost'}}
+    <span class="glyphicon glyphicon-trash" aria-hidden="true" {{action 'destroyPost' post}}></span>
+  </p></i>
   {{post.content}}
-  {{add-comment post=post addComment="addComment"}}
-
   <ul>
-    
     {{#each category in post.categories}}
       <li>{{category.type}}</li>
     {{/each}}
   </ul>
-
+  {{add-comment post=post addComment="addComment"}}
 
   <h2>Comments</h2>
   <ul>

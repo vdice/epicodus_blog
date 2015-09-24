@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container main">
   <div class="row">
       <div class="col-lg-8">
         {{new-post save='save' categories=model.categories}}
-        {{post-listing posts=model.posts update="update" destroyPost="destroyPost"}}
+        {{post-listing posts=model.posts categories=model.categories update="update" destroyPost="destroyPost"}}
       </div>
   </div>
 </div>

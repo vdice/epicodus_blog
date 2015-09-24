@@ -11,8 +11,6 @@
     {{/link-to}}
 
     <p class="post-meta">Posted by {{post.author}} on {{moment-format post.date}}
-      {{update-post post=post update="update" destroyPost='destroyPost'}}
-      <span class="glyphicon glyphicon-trash" aria-hidden="true" {{action 'destroyPost' post}}></span>
     </p>
 
   </div>

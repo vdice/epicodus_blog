@@ -10,13 +10,14 @@ export default Ember.Component.extend({
     updatePostForm() {
       this.set('updatePostForm', true);
     },
-    update(post) {
+    update(post, params) {
       var params = {
         headline: this.get('headline'),
         author: this.get('author'),
         date: this.get('date'),
         content: this.get('content'),
-        image: this.get('image')
+        image: this.get('image'),
+        categories: this.get('selectedCategories')
       };
       this.set('updatePostForm', false);
       this.sendAction('update', post, params);

@@ -1,5 +1,5 @@
 <ul>
   {{#each sortedPosts as |post|}}
-    {{post-tile post=post update="update" destroyPost="destroyPost"}}
+    {{post-tile post=post categories=categories update="update" destroyPost="destroyPost"}}
   {{/each}}
 </ul>
