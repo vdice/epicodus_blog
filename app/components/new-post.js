@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   addNewPost: false,
+  // categories: ["finance", "kush", "venture capitalism", "hackeysack", "ember"],
+  selectedCategories: [],
 
   actions: {
     postShow() {
@@ -17,7 +19,8 @@ export default Ember.Component.extend({
         author: this.get('author'),
         date: this.get('date'),
         content: this.get('content'),
-        image: this.get('image')
+        image: this.get('image'),
+        categories: this.get('selectedCategories')
       };
 
       this.set('addNewPost', false),

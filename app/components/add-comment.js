@@ -5,12 +5,12 @@ export default Ember.Component.extend({
     addComment(post) {
       var params = {
         comment: this.get('comment'),
-        user: this.get('user'),
+        user: this.get('user') ? this.get('user') : 'Anonymous',
         post: this.get('post'),
         date: new Date()
       };
 
-      this.sendAction('addComment', post, params);
+      this.sendAction('addComment', params);
     }
   }
 });

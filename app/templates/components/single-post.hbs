@@ -5,6 +5,14 @@
   {{post.content}}
   {{add-comment post=post addComment="addComment"}}
 
+  <ul>
+    
+    {{#each category in post.categories}}
+      <li>{{category.type}}</li>
+    {{/each}}
+  </ul>
+
+
   <h2>Comments</h2>
   <ul>
     {{#each sortedComments as |comment|}}

@@ -27,6 +27,8 @@
           {{input value=image id="image" class="form-control"}}
         </div>
 
+        <p>{{multiselect-checkboxes options=categories labelProperty="type" selection=selectedCategories id="selectedCategories"}}</p>
+
         <button class="btn btn-success"{{action 'save'}}>Save</button>
         <button class="btn"{{action 'postHide'}}>Cancel</button>
       </form>
