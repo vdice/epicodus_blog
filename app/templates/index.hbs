@@ -1,8 +1,18 @@
 <div class="container main">
   <div class="row">
-      <div class="col-lg-8">
-        {{new-post save='save' categories=model.categories}}
-        {{post-listing posts=model.posts categories=model.categories update="update" destroyPost="destroyPost"}}
-      </div>
+    <div class="col-lg-10">
+      {{new-post save='save' categories=model.categories}}
+      {{post-listing posts=model.posts categories=model.categories update="update" destroyPost="destroyPost"}}
+    </div>
+    <div class="col-lg-1 col-lg-offset-1">
+      <h3>Categories</h3>
+
+      <ul class="categories-main">
+        {{#each model.categories as |category|}}
+          <li><a href="#"></a>{{category.type}}</li>
+        {{/each}}
+      </ul>
+
+    </div>
   </div>
 </div>

@@ -15,13 +15,6 @@ export default Ember.Route.extend({
       params.post.save();
     },
 
-    addCategory(params) {
-      var newCategory = this.store.create('category', params);
-      newCategory.save();
-      params.post.save();
-      this.transitionTo('post', params.post);
-    },
-
     destroyPost(post) {
       post.get('comments').then(function(comments) {
         comments.forEach(function(comment) {
@@ -38,7 +31,11 @@ export default Ember.Route.extend({
           post.set(key,params[key]);
         }
       });
-      post.save();
+      post.save().then(function() {
+        params.categories.forEach(function(category) {
+          category.save();
+        });
+      });
       this.transitionTo('post', params.post);
     }
   }

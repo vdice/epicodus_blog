@@ -8,10 +8,6 @@ export default Ember.Component.extend({
       this.sendAction('update', post, params);
     },
 
-    addCategory(params) {
-      this.sendAction('addCategory', params);    
-    },
-
     addComment(params) {
       this.sendAction('addComment', params);
     },
