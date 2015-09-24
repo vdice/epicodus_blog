@@ -44,7 +44,5 @@
     "emberfire": "1.5.0",
     "moment": "2.10.6"
   },
-  "dependencies": {
-    "moment": "^2.10.6"
-  }
+  "dependencies": {}
 }

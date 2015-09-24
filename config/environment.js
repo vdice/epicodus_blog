@@ -18,6 +18,19 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    googleFonts: [
+      'Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800',
+      'Lora:400,700,400italic,700italic'
+    ],
+
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'font-src': "'self' http://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
+      'media-src': "'self'"
     }
   };
 
