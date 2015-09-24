@@ -36,3 +36,16 @@ ul {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.comments {
+  word-wrap: break-word;
+  max-width: 80vw;
+}
+
+.container ul {
+  padding-left: 0;
+}
+
+.comment-date {
+  font-size: 10px;
+}

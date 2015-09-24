@@ -7,10 +7,13 @@
 
   <h2>Comments</h2>
   <ul>
-    {{#each post.comments as |comment|}}
+    {{#each sortedComments as |comment|}}
+    <div class="comments">
       <li>
-        <strong>{{comment.user}}</strong>: {{comment.comment}}
+        <strong>{{comment.user}}</strong>: {{comment.comment}}<br>
+        <i class="comment-date">{{moment-format comment.date}}</i>
       </li>
+    </div>
     {{/each}}
   </ul>
 </div>
