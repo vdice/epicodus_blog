@@ -9,7 +9,11 @@
 
       <ul class="categories-main">
         {{#each model.categories as |category|}}
-          <li><a href="#"></a>{{category.type}}</li>
+          <li>
+            {{#link-to 'category' category.id}}
+              {{category.type}}
+            {{/link-to}}
+          </li>
         {{/each}}
       </ul>
 

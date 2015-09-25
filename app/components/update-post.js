@@ -17,7 +17,6 @@ export default Ember.Component.extend({
         date: this.get('date'),
         content: this.get('content'),
         image: this.get('image'),
-        categories: this.get('selectedCategories'),
         post: this.get('post')
       };
       this.set('updatePostForm', false);

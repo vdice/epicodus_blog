@@ -1,5 +1,5 @@
 <li>
-  <div class="post-preview">
+  <div class="post-preview article">
     {{#link-to 'post' post.id}}
       <h2 class="post-title">
         {{post.headline}}
@@ -10,7 +10,18 @@
       </h3>
     {{/link-to}}
 
-    <p class="post-meta">Posted by {{post.author}} on {{moment-format post.date}}
+    <p class="post-meta">
+      Posted by {{post.author}} on {{moment-format post.date}}
+      <!-- TODO: separate out into category-listing component -->
+      <ul>
+        {{#each category in post.categories}}
+          <li>
+            {{#link-to 'category' category.id}}
+              {{category.type}}
+            {{/link-to}}
+          </li>
+        {{/each}}
+      </ul>
     </p>
 
   </div>

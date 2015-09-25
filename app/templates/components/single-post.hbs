@@ -7,9 +7,14 @@
     <span class="glyphicon glyphicon-trash" aria-hidden="true" {{action 'destroyPost' post}}></span>
   </p></i>
   {{post.content}}
+  <!-- TODO: separate out into category-listing component -->
   <ul>
     {{#each category in post.categories}}
-      <li>{{category.type}}</li>
+      <li>
+        {{#link-to 'category' category.id}}
+          {{category.type}}
+        {{/link-to}}
+      </li>
     {{/each}}
   </ul>
   {{add-comment post=post addComment="addComment"}}

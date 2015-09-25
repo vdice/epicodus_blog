@@ -31,8 +31,9 @@ export default Ember.Route.extend({
           post.set(key,params[key]);
         }
       });
+
       post.save().then(function() {
-        params.categories.forEach(function(category) {
+        post.get('categories').forEach(function(category) {
           category.save();
         });
       });
